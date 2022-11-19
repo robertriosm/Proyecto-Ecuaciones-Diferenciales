@@ -1,7 +1,9 @@
 import time
 import random
 from quicksort import *
+import sys
 
+sys.setrecursionlimit(10**6)
 
 print("Bienvenido a la medición de tiempo de quicksort")
 print("-----------------------------------------------")

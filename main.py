@@ -1,17 +1,19 @@
 import time
+from quicksort import *
 
 # get the start time
 st = time.time()
 
-# main program
-# find sum to first 1 million numbers
-sum_x = 0
-for i in range(1000000):
-    sum_x += i
+data = [1, 7, 4, 1, 10, 9, -2]
+print("Unsorted Array")
+print(data)
 
-# wait for 3 seconds
-time.sleep(3)
-print('Sum of first 1 million numbers is:', sum_x)
+size = len(data)
+
+quickSort(data, 0, size - 1)
+
+print('Sorted Array in Ascending Order:')
+print(data)
 
 # get the end time
 et = time.time()
@@ -19,3 +21,4 @@ et = time.time()
 # get the execution time
 elapsed_time = et - st
 print('Execution time:', elapsed_time, 'seconds')
+

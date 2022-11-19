@@ -1,19 +1,23 @@
 import time
+import random
 from quicksort import *
 
-# get the start time
-st = time.time()
 
-data = [1, 7, 4, 1, 10, 9, -2]
-print("Unsorted Array")
-print(data)
+print("Bienvenido a la medición de tiempo de quicksort")
+print("-----------------------------------------------")
+print("Ingrese el tamaño de array a generar:")
+n = int(input())
+data = [0] * n
+
+#generar array de numeros aleatorios
+for i in range(n):
+    data[i] = random.randint(0,10000)
+
 
 size = len(data)
 
+st = time.time()
 quickSort(data, 0, size - 1)
-
-print('Sorted Array in Ascending Order:')
-print(data)
 
 # get the end time
 et = time.time()
